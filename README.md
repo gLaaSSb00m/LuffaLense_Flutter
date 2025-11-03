@@ -73,7 +73,7 @@ luffalense/
 ![Home Screen](assets/images/Home.jpg)
 
 ### Before Prediction
-<img src="assets/images/before_Prediction.jpg" alt="Before Prediction" width="100"/>
+<img src="assets/images/before_Prediction.jpg" alt="Before Prediction" width="300"/>
 
 ### After Prediction
 ![After Prediction](assets/images/after_Prediction.jpg)
