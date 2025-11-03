@@ -73,14 +73,13 @@ luffalense/
 ![Home Screen](assets/images/Home.jpg)
 
 ### Before Prediction
-![Before Prediction](assets/images/before_Prediction.jpg)
-
+<img src="assets/images/before_Prediction.jpg" alt="Before Prediction" width="600"/>
 ### After Prediction
 ![After Prediction](assets/images/after_Prediction.jpg)
 
 ## APK Download
 
-Download the latest APK: [build/app/outputs/flutter-apk/luffalense.apk](build/app/outputs/flutter-apk/luffalense.apk)
+Download the latest APK: [download](https://drive.google.com/file/d/1z7-kSG48p2qFkgVDU9feIjd81Dw49WtO/view?usp=sharing)
 
 ## Contributing
 
