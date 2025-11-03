@@ -64,19 +64,19 @@ luffalense/
 
 4. **Build APK:**
    ```
-   flutter build apk --release
+   flutter build apk --debug
    ```
 
 ## Screenshots
 
 ### Home Screen
-![Home Screen](assets/images/Home.jpg)
+<img src="assets/images/Home.jpg" alt="Before Prediction" width="300"/>
 
 ### Before Prediction
 <img src="assets/images/before_Prediction.jpg" alt="Before Prediction" width="300"/>
 
 ### After Prediction
-![After Prediction](assets/images/after_Prediction.jpg)
+<img src="assets/images/after_Prediction.jpg" alt="Before Prediction" width="300"/>
 
 ## APK Download
 
