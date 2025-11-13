@@ -80,7 +80,7 @@ luffalense/
 
 ## APK Download
 
-Download the latest APK: [download apk](https://drive.google.com/file/d/1IsOZaaUUf_RUCaPuUULZyJtc_6CShPkM/view?usp=sharing)
+Download the latest APK: [download apk](https://drive.google.com/file/d/1VI9QoRzFgOfd5qOdbfVHA3mTTdiQ2xD5/view?usp=sharing)
 
 ## Contributing
 
