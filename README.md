@@ -95,7 +95,7 @@ luffalense/
 
 ## APK Download
 
-Download the latest APK: [download apk](https://drive.google.com/file/d/1VI9QoRzFgOfd5qOdbfVHA3mTTdiQ2xD5/view?usp=sharing)
+Download the latest APK: [download apk](https://drive.google.com/file/d/1_XJcWY64-djYHnEofC8tSX9aLCPT7b6N/view?usp=drivesdk)
 
 ## Contributing
 
