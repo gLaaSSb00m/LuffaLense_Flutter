@@ -58,69 +58,124 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF7DABF),
       appBar: AppBar(
-        title: const Text('DeepSeek Chatbot'),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.green, size: 22),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: const Text(
+          'DeepSeek Chatbot',
+          style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+        ),
       ),
-      body: Column(
-        children: [
-          // The main content area where messages are displayed.
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8.0),
-              itemCount: _messages.length,
-              itemBuilder: (context, index) {
-                final message = _messages[index];
-                return Align(
-                  alignment: message.isUser ? Alignment.centerRight : Alignment.centerLeft,
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 4.0),
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-                    decoration: BoxDecoration(
-                      color: message.isUser ? Colors.blue : Colors.grey.shade300,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Text(
-                      message.text,
-                      style: TextStyle(color: message.isUser ? Colors.white : Colors.black),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-          // A loading indicator shown while waiting for the API response.
-          if (_isLoading)
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: CircularProgressIndicator(),
-            ),
-          // The input area for the user to type messages.
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    decoration: InputDecoration(
-                      hintText: 'Type your message...',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+      body: SafeArea(
+        child: Column(
+          children: [
+            // The main content area where messages are displayed.
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(20.0),
+                itemCount: _messages.length,
+                itemBuilder: (context, index) {
+                  final message = _messages[index];
+                  return Align(
+                    alignment: message.isUser ? Alignment.centerRight : Alignment.centerLeft,
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(vertical: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                      constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.75),
+                      decoration: BoxDecoration(
+                        color: message.isUser ? Colors.green : Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: const Radius.circular(16.0),
+                          topRight: const Radius.circular(16.0),
+                          bottomLeft: message.isUser ? const Radius.circular(16.0) : const Radius.circular(4.0),
+                          bottomRight: message.isUser ? const Radius.circular(4.0) : const Radius.circular(16.0),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 4,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Text(
+                        message.text,
+                        style: TextStyle(
+                          color: message.isUser ? Colors.white : Colors.black87,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                    onSubmitted: (value) => _sendMessage(),
-                  ),
-                ),
-                const SizedBox(width: 8.0),
-                IconButton(
-                  icon: const Icon(Icons.send),
-                  onPressed: _isLoading ? null : _sendMessage,
-                ),
-              ],
+                  );
+                },
+              ),
             ),
-          ),
-        ],
+            // A loading indicator shown while waiting for the API response.
+            if (_isLoading)
+              const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+                ),
+              ),
+            // The input area for the user to type messages.
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 4,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: TextField(
+                        controller: _controller,
+                        decoration: InputDecoration(
+                          hintText: 'Type your message...',
+                          hintStyle: TextStyle(color: Colors.grey.shade600),
+                          border: InputBorder.none,
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                        ),
+                        onSubmitted: (value) => _sendMessage(),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12.0),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 4,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.send, color: Colors.white),
+                      onPressed: _isLoading ? null : _sendMessage,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

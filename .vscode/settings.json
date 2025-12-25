@@ -1,4 +1,11 @@
 {
-    "cmake.sourceDirectory": "I:/Luffa Flutter/luffalense/linux",
-    "java.configuration.updateBuildConfiguration": "interactive"
+  "dart.flutterSdkPath": "D:\\flutter",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-25",
+      "path": "D:\\jdk 25",
+      "default": true
+    }
+  ],
+  "java.androidSdkPath": "D:\\Android\\SDK"
 }

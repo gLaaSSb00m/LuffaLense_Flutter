@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'xgboost_predictor.dart';
+import 'package:luffalense/chat_screen.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({super.key});
@@ -305,6 +306,17 @@ class _SecondPageState extends State<SecondPage> with TickerProviderStateMixin {
           icon: const Icon(Icons.arrow_back_ios, color: Colors.green, size: 22),
           onPressed: () => Navigator.pop(context),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.chat, color: Colors.green, size: 24),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChatScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: SafeArea(
         child: Stack(

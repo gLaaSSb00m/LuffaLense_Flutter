@@ -24,8 +24,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/tflite/Smooth/
-    - assets/tflite/Spoonge/
 
 flutter_launcher_icons:
   android: "launcher_icon"
