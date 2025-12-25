@@ -1,6 +1,2 @@
-# TODO: Push Flutter Project to GitHub
-
-- [x] Update README.md with project description, structure, run instructions, APK link, and images
-- [x] Check Git status and add changes
-- [x] Commit changes
-- [x] Push to GitHub origin
+- [x] Update API key in lib/deepseek_service.dart
+- [x] Update model ID to 'deepseek/deepseek-r1-0528:free' in lib/deepseek_service.dart and lib/chat_screen.dart

@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:luffalense/deepseek_service.dart';
+
 
 // A simple data class for a chat message.
 class ChatMessage {
@@ -39,7 +40,7 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       // Send the message to the DeepSeek API and get the response.
       // You can change the model here, e.g., 'deepseek-coder'.
-      final response = await _deepSeekService.getChatResponse(text, model: 'deepseek-chat');
+      final response = await _deepSeekService.getChatResponse(text, model: 'deepseek/deepseek-chat');
       
       // Add the bot's response to the chat.
       setState(() {
@@ -67,7 +68,7 @@ class _ChatScreenState extends State<ChatScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'DeepSeek Chatbot',
+          'Luffa Chatbot',
           style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
         ),
       ),
@@ -103,11 +104,23 @@ class _ChatScreenState extends State<ChatScreen> {
                           ),
                         ],
                       ),
-                      child: Text(
-                        message.text,
-                        style: TextStyle(
-                          color: message.isUser ? Colors.white : Colors.black87,
-                          fontSize: 16,
+                      child: MarkdownBody(
+                        data: message.text,
+                        styleSheet: MarkdownStyleSheet(
+                          p: TextStyle(
+                            color: message.isUser ? Colors.white : Colors.black87,
+                            fontSize: 16,
+                          ),
+                          strong: TextStyle(
+                            color: message.isUser ? Colors.white : Colors.black87,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          em: TextStyle(
+                            color: message.isUser ? Colors.white : Colors.black87,
+                            fontSize: 16,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
                       ),
                     ),

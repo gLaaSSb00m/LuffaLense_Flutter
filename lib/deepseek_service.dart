@@ -6,10 +6,10 @@ class DeepSeekService {
   // IMPORTANT: Replace this with your actual DeepSeek API key.
   // For production apps, it's crucial to store this key securely and not hardcode it here.
   // Consider using environment variables or a secure vault.
-  final String _apiKey = 'sk-7172c04d20b24bad9dfd9f69f5d2d0e1';
-  final String _apiUrl = 'https://api.deepseek.com/chat/completions';
+  final String _apiKey = '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';
+  final String _apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
 
-  Future<String> getChatResponse(String message, {String model = 'deepseek-chat'}) async {
+  Future<String> getChatResponse(String message, {String model = 'deepseek/deepseek-r1-0528:free'}) async {
     if (_apiKey == 'YOUR_DEEPSEEK_API_KEY') {
       return "Please update the _apiKey in lib/deepseek_service.dart with your actual DeepSeek API key.";
     }
