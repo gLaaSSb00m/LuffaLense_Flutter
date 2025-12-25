@@ -1,13 +1,14 @@
 # LuffaLense
 
-LuffaLense is a Flutter application designed for luffa plant disease detection using machine learning. It allows users to capture or select images of luffa plants and predict potential diseases using TensorFlow Lite models.
+LuffaLense is a comprehensive Flutter application for luffa plant care, combining disease detection using machine learning with an AI-powered chatbot for expert advice. Users can capture or select images of luffa plants to predict potential diseases via TensorFlow Lite models, and consult a specialized chatbot for information on luffa cultivation, health, and related topics.
 
 ## Features
 
 - Image capture and selection from gallery
 - Disease prediction using pre-trained ML models
+- AI-powered chatbot for luffa plant information and advice
 - User-friendly interface with animations
-- Support for Android and iOS
+- Support for Android, iOS, and web platforms
 
 ## Project Structure
 
@@ -70,13 +71,16 @@ luffalense/
 ## Screenshots
 
 ### Home Screen
-<img src="assets/images/Home.jpg" alt="Before Prediction" width="300"/>
+<img src="assets/images/Home.jpg" alt="Home Screen" width="300"/>
 
 ### Before Prediction
 <img src="assets/images/before_Prediction.jpg" alt="Before Prediction" width="300"/>
 
 ### After Prediction
-<img src="assets/images/after_Prediction.jpg" alt="Before Prediction" width="300"/>
+<img src="assets/images/after_Prediction.jpg" alt="After Prediction" width="300"/>
+
+### Chatbot Interface
+<img src="assets/images/chatbot.jpeg" alt="Chatbot Interface" width="300"/>
 
 ## APK Download
 

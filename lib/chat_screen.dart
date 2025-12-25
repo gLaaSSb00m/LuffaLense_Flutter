@@ -40,7 +40,7 @@ class _ChatScreenState extends State<ChatScreen> {
     try {
       // Send the message to the DeepSeek API and get the response.
       // You can change the model here, e.g., 'deepseek-coder'.
-      final response = await _deepSeekService.getChatResponse(text, model: 'deepseek/deepseek-chat');
+      final response = await _deepSeekService.getChatResponse(text, model: 'deepseek/deepseek-r1-0528:free');
       
       // Add the bot's response to the chat.
       setState(() {
