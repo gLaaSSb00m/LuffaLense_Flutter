@@ -4,11 +4,22 @@ LuffaLense is a comprehensive Flutter application for luffa plant care, combinin
 
 ## Features
 
-- Image capture and selection from gallery
-- Disease prediction using pre-trained ML models
-- AI-powered chatbot for luffa plant information and advice
-- User-friendly interface with animations
-- Support for Android, iOS, and web platforms
+### Disease Detection
+- **Image Capture and Selection**: Users can take photos directly from the camera or select images from their gallery for analysis.
+- **Machine Learning Prediction**: Utilizes TensorFlow Lite models to analyze luffa plant images and predict potential diseases such as Smooth and Sponge varieties.
+- **Real-time Results**: Provides instant disease prediction results with confidence scores and recommendations.
+
+### AI-Powered Chatbot
+- **Specialized Knowledge**: Powered by DeepSeek AI, the chatbot provides expert information specifically about luffa plants.
+- **Comprehensive Coverage**: Offers advice on cultivation, disease prevention, health benefits, and general plant care.
+- **Interactive Interface**: User-friendly chat interface with markdown support for rich text responses.
+- **Context-Aware Responses**: Maintains conversation context and redirects queries back to luffa-related topics.
+
+### User Experience
+- **Intuitive Navigation**: Clean, modern interface with smooth animations and transitions.
+- **Multi-Platform Support**: Fully functional on Android, iOS, and web platforms.
+- **Offline Capabilities**: Core features work offline, with online features for AI chatbot.
+- **Responsive Design**: Adapts seamlessly to different screen sizes and orientations.
 
 ## Project Structure
 
